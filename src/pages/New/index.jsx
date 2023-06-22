@@ -4,6 +4,7 @@ import { TextArea } from "../../components/TextArea"
 import { Input } from "../../components/Input"
 import { Section } from "../../components/Section"
 import { NoteItem } from "../../components/NoteItem"
+import { Button } from "../../components/Button"
 
 export function New() {
   return(
@@ -22,13 +23,29 @@ export function New() {
 
           <Section title="Links úteis">
             <NoteItem 
-            value="https://github.com/"
+              value="https://github.com/"
             />
             <NoteItem 
-            value=""
-            isNew
+              value=""
+              isNew
+              placeholder="Novo link"
             />
           </Section>
+         
+          <Section title="Marcadores">
+            <div className="tags">
+              <NoteItem 
+                value="React"
+              />
+              <NoteItem 
+                value=""
+                isNew
+                placeholder="Nova tag"
+              />
+            </div>
+          </Section>
+
+          <Button title="Salvar" />
         </Form>
       </main>
     </Container>
